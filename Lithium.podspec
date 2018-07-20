@@ -5,8 +5,8 @@ Pod::Spec.new do |s|
   s.author       = { "Bas van Kuijck" => "bas@e-sites.nl" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.homepage     = "http://www.e-sites.nl"
-  s.summary      = "Advanced logging functionality"
-  s.source       = { :git => "git@bitbucket.org:esitesmobileioslibrary/elogger.git", :tag => "#{s.version}" }
+  s.summary      = "_The_ E-sites logging framework"
+  s.source       = { :git => "https://github.com/e-sites/Lithium.git", :tag => "#{s.version}" }
   s.source_files  = "Sources/ELogger.h"
   s.public_header_files  = "Sources/ELogger.h"
   s.platform     = :ios, '9.0'
