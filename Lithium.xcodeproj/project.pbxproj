@@ -28,7 +28,7 @@
 		C34B3A4E21021C500001027A /* Cobalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A3821021C4F0001027A /* Cobalt.swift */; };
 		C34B3A4F21021C500001027A /* PapertrailLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A3A21021C4F0001027A /* PapertrailLogger.swift */; };
 		C34B3A5021021C500001027A /* PapertrailLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C34B3A3B21021C4F0001027A /* PapertrailLogger.h */; };
-		C34B3A5221021C500001027A /* ELogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C34B3A3D21021C4F0001027A /* ELogger.h */; };
+		C34B3A5221021C500001027A /* Lithium.h in Headers */ = {isa = PBXBuildFile; fileRef = C34B3A3D21021C4F0001027A /* Lithium.h */; };
 		DFA347F91D649A7000C41F8D /* Lithium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA347EE1D649A7000C41F8D /* Lithium.framework */; };
 		DFA347FE1D649A7000C41F8D /* LithiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA347FD1D649A7000C41F8D /* LithiumTests.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +67,7 @@
 		C34B3A3A21021C4F0001027A /* PapertrailLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapertrailLogger.swift; sourceTree = "<group>"; };
 		C34B3A3B21021C4F0001027A /* PapertrailLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PapertrailLogger.h; sourceTree = "<group>"; };
 		C34B3A3C21021C4F0001027A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C34B3A3D21021C4F0001027A /* ELogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELogger.h; sourceTree = "<group>"; };
+		C34B3A3D21021C4F0001027A /* Lithium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lithium.h; sourceTree = "<group>"; };
 		DFA347EE1D649A7000C41F8D /* Lithium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lithium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA347F81D649A7000C41F8D /* LithiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LithiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA347FD1D649A7000C41F8D /* LithiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LithiumTests.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 				C34B3A3621021C4F0001027A /* Cobalt */,
 				C34B3A3921021C4F0001027A /* Papertrail */,
 				C34B3A3C21021C4F0001027A /* Info.plist */,
-				C34B3A3D21021C4F0001027A /* ELogger.h */,
+				C34B3A3D21021C4F0001027A /* Lithium.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34B3A5021021C500001027A /* PapertrailLogger.h in Headers */,
-				C34B3A5221021C500001027A /* ELogger.h in Headers */,
+				C34B3A5221021C500001027A /* Lithium.h in Headers */,
 				C34B3A4D21021C500001027A /* CobaltLogger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
