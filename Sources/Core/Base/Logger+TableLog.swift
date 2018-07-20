@@ -186,7 +186,8 @@ extension Logger {
             }
             
             if (valueString.count > maximumValueCharactersCount) {
-                valueString = valueString.substring(to: valueString.index(valueString.startIndex, offsetBy: maximumValueCharactersCount - 3)) + "..."
+                let endIndex = valueString.index(valueString.startIndex, offsetBy: maximumValueCharactersCount - 3)
+                valueString = String(valueString[...endIndex])
             }
             let spacesValue = " " * (longestValCount - valueString.count)
             

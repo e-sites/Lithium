@@ -28,7 +28,7 @@
 		C34B3A4E21021C500001027A /* Cobalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A3821021C4F0001027A /* Cobalt.swift */; };
 		C34B3A4F21021C500001027A /* PapertrailLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A3A21021C4F0001027A /* PapertrailLogger.swift */; };
 		C34B3A5021021C500001027A /* PapertrailLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C34B3A3B21021C4F0001027A /* PapertrailLogger.h */; };
-		C34B3A5221021C500001027A /* Lithium.h in Headers */ = {isa = PBXBuildFile; fileRef = C34B3A3D21021C4F0001027A /* Lithium.h */; };
+		C34B3A5221021C500001027A /* Lithium.h in Headers */ = {isa = PBXBuildFile; fileRef = C34B3A3D21021C4F0001027A /* Lithium.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFA347F91D649A7000C41F8D /* Lithium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA347EE1D649A7000C41F8D /* Lithium.framework */; };
 		DFA347FE1D649A7000C41F8D /* LithiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA347FD1D649A7000C41F8D /* LithiumTests.swift */; };
 /* End PBXBuildFile section */

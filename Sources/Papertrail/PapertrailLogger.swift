@@ -149,7 +149,7 @@ public class PapertrailLogger : NSObject {
         do {
             try _tcpSocket.connect(toHost: host, onPort:port, withTimeout: -1)
             _connecting = true
-        } catch let error {
+        } catch {
 //            print("Error connecting to tcp socket: \(error)")
         }
     }
@@ -176,7 +176,7 @@ public class PapertrailLogger : NSObject {
         if (msg.hasPrefix("[ DEALLOC ]")) {
             lTag = "dealloc"
         }
-        let o = "\u{00A0}" * max(1, (16 - lTag.characters.count))
+        let o = "\u{00A0}" * max(1, (16 - lTag.count))
         let tag = _wrap(text: "\(lTag) »", inColor: "1;36") + o
         
         let programName = self.programName ?? "anonymous"

@@ -80,7 +80,7 @@ extension Logger {
                     }
                     str = regex.stringByReplacingMatches(in: str,
                                                          options: NSRegularExpression.MatchingOptions(rawValue: 0),
-                                                         range: NSMakeRange(0, str.characters.count),
+                                                         range: NSMakeRange(0, str.count),
                                                          withTemplate: template)
                     if (!str.contains("\(escapeCharUnescaped)\(type)") || attempts == 10) {
                         break
@@ -91,7 +91,7 @@ extension Logger {
             }
             if (parseType == plainParseType) {
                 if let regex = try? NSRegularExpression(pattern: "(\u{001b}\\[(|bg|fg)(|[0-9]{1,3},[0-9]{1,3},[0-9]{1,3});)", options: .caseInsensitive) {
-                    str = regex.stringByReplacingMatches(in: str, options: .withTransparentBounds, range: NSMakeRange(0, str.characters.count), withTemplate: "")
+                    str = regex.stringByReplacingMatches(in: str, options: .withTransparentBounds, range: NSMakeRange(0, str.count), withTemplate: "")
                 }
             }
             return str
