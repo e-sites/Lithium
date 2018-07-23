@@ -1,3 +1,5 @@
+source 'git@github.com:CocoaPods/Specs.git'
+
 target 'Lithium' do
   use_frameworks!
   pod 'SwiftHEXColors'
