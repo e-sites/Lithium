@@ -73,7 +73,7 @@ public func response(_ method: String, _ url:String, _ parameters:String?=nil)
 public func table<O>(object:O, shouldPrint:Bool=true)
 public func table<O>(object: O, shouldPrint:Bool=true)
 public func table<V>(array: [V], shouldPrint:Bool=true)
-public func table<V>(dictionary: [String: V], title: String shouldPrint: Bool)
+public func table<V>(dictionary: [String: V], title: String, shouldPrint: Bool)
 ```
 
 ## Crashlytics
