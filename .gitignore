@@ -69,3 +69,4 @@ fastlane/test_output
 fastlane/.tmp_build
 vendor/bundle
 buildkite-script-*
+Carthage/

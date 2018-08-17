@@ -10,12 +10,13 @@ _The_ E-sites logging framework.
 
 [![Platform](https://img.shields.io/cocoapods/p/Lithium.svg?style=flat)](http://cocoadocs.org/docsets/Lithium)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Lithium.svg)](http://cocoadocs.org/docsets/Lithium)
-[![Quality](https://apps.e-sites.nl/cocoapodsquality/Lithium/badge.svg?004)](https://cocoapods.org/pods/Lithium/quality)
 [![Travis-ci](https://travis-ci.org/e-sites/Lithium.svg?branch=master&001)](https://travis-ci.org/e-sites/Lithium)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
 # Installation
 
+## CocoaPods
 Podfile:
 
 ```ruby
@@ -26,6 +27,20 @@ And then
 
 ```
 pod install
+```
+
+## Carthage
+
+Cartfile:
+
+```ruby
+github "e-sites/Lithium"
+```
+
+And then
+
+```
+carthage update
 ```
 
 # Implementation
