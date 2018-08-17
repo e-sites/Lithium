@@ -6,4 +6,4 @@ before_install:
   - carthage update --cache-builds --platform iOS
 
 script:
-  - carthage build --cache-builds --platform iOS
+  - xcodebuild -project Lithium.xcodeproj -scheme Lithium -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' clean build
