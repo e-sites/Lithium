@@ -145,7 +145,9 @@ extension Logger {
                 prefix = "ERR"
             }
             if (style.prefixText != nil) {
-                prefix = self.formatter.format(component: .prefix(format: "%@"), style: style, level: level, items: items, context: context).replacingOccurrences(of: " ", with: "")
+                prefix = self.formatter.format(component: .prefix(format: "%@"), style: style, level: level, items: items, context: context)
+                    .uppercased()
+                    .components(separatedBy: CharacterSet.uppercaseLetters.inverted).joined()
             }
             
             
