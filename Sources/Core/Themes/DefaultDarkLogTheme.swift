@@ -67,20 +67,38 @@ public class DefaultDarkLogTheme: LogTheme {
         style.prefixText = "Warning"
         return style
     }()
-    
+
     public var successStyle: LogStyle = {
         let style = DarkLogStyle()
         style.prefixForegroundColor = UIColor(hex: 0x6ec770)
         style.prefixText = "Success"
         return style
     }()
-    
+
     public var verboseStyle:LogStyle = {
         let style = DarkLogStyle()
         style.prefixForegroundColor = UIColor(hex: 0x9e9e9e)
         style.prefixText = "Verbose"
         return style
     }()
+
+    public var requestStyle: LogStyle = {
+        let style = DarkLogStyle()
+        style.prefixForegroundColor = UIColor(hex: 0x9600ff)
+        style.prefixText = "Request"
+        return style
+    }()
+
+    public var responseStyle: LogStyle = {
+        let style = DarkLogStyle()
+        style.prefixForegroundColor = UIColor(hex: 0xff00ff)
+        style.prefixText = "Response"
+        return style
+    }()
+
+    public var hasColors: Bool {
+        return true
+    }
 }
 
 

@@ -44,8 +44,8 @@ public class LogFormatter {
     init() {
         _setDateFormatter()
     }
-    
-    init(format: String, components: [Component]) {
+
+    public init(format: String, components: [Component]) {
         self.format = format
         self.components = components
         _setDateFormatter()

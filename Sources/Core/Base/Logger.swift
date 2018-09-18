@@ -74,7 +74,21 @@ public class Logger {
         colorLog(foregroundColor, backgroundColor: nil, (items.map { String(describing: $0) }).joined(separator: formatter.separator), file: file, function: function, line:line, column: column)
     }
     
-    
+    public func request(_ method: String, _ url:String, _ parameters:String?=nil, file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+        var items: [Any] = [ method, url ]
+        if let parameters = parameters {
+            items.append(parameters)
+        }
+        log(level: .verbose, style: theme.requestStyle, items, file: file, function: function, line:line, column: column)
+    }
+
+    public func response(_ method: String, _ url:String, _ parameters:String?=nil, file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+        var items: [Any] = [ method, url ]
+        if let parameters = parameters {
+            items.append(parameters)
+        }
+        log(level: .verbose, style: theme.responseStyle, items, file: file, function: function, line:line, column: column)
+    }
     
     private func _colorLog(foregroundColor: String, backgroundColor:String?, items:[Any], file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
         let style = LogStyle()

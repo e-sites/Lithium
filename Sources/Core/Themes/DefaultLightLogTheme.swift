@@ -80,4 +80,22 @@ public class DefaultLightLogTheme: LogTheme {
         style.prefixText = "Verbose"
         return style
     }()
+
+    public var requestStyle: LogStyle = {
+        let style = LogStyle()
+        style.prefixForegroundColor = UIColor(hex: 0x9600ff)
+        style.prefixText = "Request"
+        return style
+    }()
+
+    public var responseStyle: LogStyle = {
+        let style = LogStyle()
+        style.prefixForegroundColor = UIColor(hex: 0xff00ff)
+        style.prefixText = "Response"
+        return style
+    }()
+
+    public var hasColors: Bool {
+        return true
+    }
 }

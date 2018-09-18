@@ -88,4 +88,26 @@ public class EsitesLightLogTheme : LogTheme {
         style.foregroundColor = UIColor(hex: 0x7a7a7a)!
         return style
     }()
+
+    public var requestStyle: LogStyle = {
+        let logStyle = LogStyle()
+        logStyle.foregroundColor = UIColor(hex: 0x9600ff)!
+        logStyle.prefixBackgroundColor = logStyle.foregroundColor
+        logStyle.prefixForegroundColor = UIColor.white
+        logStyle.prefixText = " REQ "
+        return logStyle
+    }()
+
+    public var responseStyle: LogStyle = {
+        let logStyle = LogStyle()
+        logStyle.foregroundColor = UIColor(hex: 0xff00ff)!
+        logStyle.prefixBackgroundColor = logStyle.foregroundColor
+        logStyle.prefixForegroundColor = UIColor.white
+        logStyle.prefixText = " RES "
+        return logStyle
+    }()
+    
+    public var hasColors: Bool {
+        return true
+    }
 }

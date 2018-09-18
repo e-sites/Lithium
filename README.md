@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    logger.theme = DefaultDarkLogTheme()
+    logger.theme = EmojiLogTheme()
     // logger.theme = NoColorsLogTheme() // If you don't have the XcodeColors plugin installed
     #if !DEBUG
     logger.enabled = false

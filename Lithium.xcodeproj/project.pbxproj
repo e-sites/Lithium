@@ -7,11 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30D5889214FF78400F36DB8 /* EmojiLogTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D5888214FF78400F36DB8 /* EmojiLogTheme.swift */; };
+		C30D588B2150D95A00F36DB8 /* Cobalt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D588A2150D95A00F36DB8 /* Cobalt.framework */; };
+		C30D588E2150DB7A00F36DB8 /* Erbium.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3FF3B232126ACDF00DB75D2 /* Erbium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D588F2150DB8700F36DB8 /* Cobalt.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D588A2150D95A00F36DB8 /* Cobalt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58902150DB8700F36DB8 /* Dysprosium.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3FF3B1F2126ACD200DB75D2 /* Dysprosium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58912150DB8700F36DB8 /* CocoaAsyncSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3FF3B1D2126AC2C00DB75D2 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58932150DB9F00F36DB8 /* SwiftHEXColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D58922150DB9E00F36DB8 /* SwiftHEXColors.framework */; };
+		C30D58942150DBA100F36DB8 /* SwiftHEXColors.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D58922150DB9E00F36DB8 /* SwiftHEXColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58962150DBAE00F36DB8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D58952150DBAE00F36DB8 /* SwiftyJSON.framework */; };
+		C30D58972150DBB000F36DB8 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D58952150DBAE00F36DB8 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D589F2150DBC500F36DB8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D58982150DBC400F36DB8 /* RxCocoa.framework */; };
+		C30D58A02150DBC500F36DB8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D58992150DBC400F36DB8 /* Alamofire.framework */; };
+		C30D58A12150DBC500F36DB8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D589A2150DBC400F36DB8 /* RxSwift.framework */; };
+		C30D58A22150DBC500F36DB8 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D589B2150DBC500F36DB8 /* KeychainAccess.framework */; };
+		C30D58A32150DBC500F36DB8 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D589C2150DBC500F36DB8 /* RxBlocking.framework */; };
+		C30D58A42150DBC500F36DB8 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D589D2150DBC500F36DB8 /* FBLPromises.framework */; };
+		C30D58A52150DBC500F36DB8 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D589E2150DBC500F36DB8 /* Promises.framework */; };
+		C30D58A62150DBC800F36DB8 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D58992150DBC400F36DB8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58A72150DBC800F36DB8 /* FBLPromises.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D589D2150DBC500F36DB8 /* FBLPromises.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58A82150DBC800F36DB8 /* KeychainAccess.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D589B2150DBC500F36DB8 /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58A92150DBC800F36DB8 /* Promises.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D589E2150DBC500F36DB8 /* Promises.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58AA2150DBC800F36DB8 /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D589C2150DBC500F36DB8 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58AB2150DBC800F36DB8 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D58982150DBC400F36DB8 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30D58AC2150DBC800F36DB8 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C30D589A2150DBC400F36DB8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C34B3A3E21021C500001027A /* Logger-Dysprosium.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A2321021C4F0001027A /* Logger-Dysprosium.swift */; };
 		C34B3A3F21021C500001027A /* LogTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A2521021C4F0001027A /* LogTheme.swift */; };
 		C34B3A4021021C500001027A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A2721021C4F0001027A /* UIColor.swift */; };
 		C34B3A4121021C500001027A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A2821021C4F0001027A /* String.swift */; };
-		C34B3A4221021C500001027A /* Logger+Esites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A2921021C4F0001027A /* Logger+Esites.swift */; };
 		C34B3A4321021C500001027A /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A2A21021C4F0001027A /* LogFormatter.swift */; };
 		C34B3A4421021C500001027A /* EsitesDarkLogTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A2C21021C4F0001027A /* EsitesDarkLogTheme.swift */; };
 		C34B3A4521021C500001027A /* EsitesLightLogTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B3A2D21021C4F0001027A /* EsitesLightLogTheme.swift */; };
@@ -44,12 +67,47 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C30D588D2150DB6B00F36DB8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C30D58A62150DBC800F36DB8 /* Alamofire.framework in CopyFiles */,
+				C30D58A72150DBC800F36DB8 /* FBLPromises.framework in CopyFiles */,
+				C30D58A82150DBC800F36DB8 /* KeychainAccess.framework in CopyFiles */,
+				C30D58A92150DBC800F36DB8 /* Promises.framework in CopyFiles */,
+				C30D58AA2150DBC800F36DB8 /* RxBlocking.framework in CopyFiles */,
+				C30D58AB2150DBC800F36DB8 /* RxCocoa.framework in CopyFiles */,
+				C30D58AC2150DBC800F36DB8 /* RxSwift.framework in CopyFiles */,
+				C30D58972150DBB000F36DB8 /* SwiftyJSON.framework in CopyFiles */,
+				C30D58942150DBA100F36DB8 /* SwiftHEXColors.framework in CopyFiles */,
+				C30D588F2150DB8700F36DB8 /* Cobalt.framework in CopyFiles */,
+				C30D58902150DB8700F36DB8 /* Dysprosium.framework in CopyFiles */,
+				C30D58912150DB8700F36DB8 /* CocoaAsyncSocket.framework in CopyFiles */,
+				C30D588E2150DB7A00F36DB8 /* Erbium.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C30D5888214FF78400F36DB8 /* EmojiLogTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiLogTheme.swift; sourceTree = "<group>"; };
+		C30D588A2150D95A00F36DB8 /* Cobalt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cobalt.framework; path = Carthage/Build/iOS/Cobalt.framework; sourceTree = "<group>"; };
+		C30D58922150DB9E00F36DB8 /* SwiftHEXColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHEXColors.framework; path = Carthage/Build/iOS/SwiftHEXColors.framework; sourceTree = "<group>"; };
+		C30D58952150DBAE00F36DB8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		C30D58982150DBC400F36DB8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		C30D58992150DBC400F36DB8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		C30D589A2150DBC400F36DB8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		C30D589B2150DBC500F36DB8 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		C30D589C2150DBC500F36DB8 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		C30D589D2150DBC500F36DB8 /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBLPromises.framework; path = Carthage/Build/iOS/FBLPromises.framework; sourceTree = "<group>"; };
+		C30D589E2150DBC500F36DB8 /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promises.framework; path = Carthage/Build/iOS/Promises.framework; sourceTree = "<group>"; };
 		C34B3A2321021C4F0001027A /* Logger-Dysprosium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Logger-Dysprosium.swift"; sourceTree = "<group>"; };
 		C34B3A2521021C4F0001027A /* LogTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTheme.swift; sourceTree = "<group>"; };
 		C34B3A2721021C4F0001027A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C34B3A2821021C4F0001027A /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		C34B3A2921021C4F0001027A /* Logger+Esites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Logger+Esites.swift"; sourceTree = "<group>"; };
 		C34B3A2A21021C4F0001027A /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 		C34B3A2C21021C4F0001027A /* EsitesDarkLogTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsitesDarkLogTheme.swift; sourceTree = "<group>"; };
 		C34B3A2D21021C4F0001027A /* EsitesLightLogTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsitesLightLogTheme.swift; sourceTree = "<group>"; };
@@ -80,9 +138,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30D58932150DB9F00F36DB8 /* SwiftHEXColors.framework in Frameworks */,
 				C3FF3B242126ACE000DB75D2 /* Erbium.framework in Frameworks */,
+				C30D58A12150DBC500F36DB8 /* RxSwift.framework in Frameworks */,
+				C30D58A42150DBC500F36DB8 /* FBLPromises.framework in Frameworks */,
+				C30D589F2150DBC500F36DB8 /* RxCocoa.framework in Frameworks */,
+				C30D58A22150DBC500F36DB8 /* KeychainAccess.framework in Frameworks */,
+				C30D58962150DBAE00F36DB8 /* SwiftyJSON.framework in Frameworks */,
+				C30D588B2150D95A00F36DB8 /* Cobalt.framework in Frameworks */,
+				C30D58A32150DBC500F36DB8 /* RxBlocking.framework in Frameworks */,
 				C3FF3B1E2126AC2C00DB75D2 /* CocoaAsyncSocket.framework in Frameworks */,
+				C30D58A52150DBC500F36DB8 /* Promises.framework in Frameworks */,
 				C3FF3B202126ACD200DB75D2 /* Dysprosium.framework in Frameworks */,
+				C30D58A02150DBC500F36DB8 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +203,6 @@
 			children = (
 				C34B3A2721021C4F0001027A /* UIColor.swift */,
 				C34B3A2821021C4F0001027A /* String.swift */,
-				C34B3A2921021C4F0001027A /* Logger+Esites.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +215,7 @@
 				C34B3A2E21021C4F0001027A /* NoColorsLogTheme.swift */,
 				C34B3A2F21021C4F0001027A /* DefaultDarkLogTheme.swift */,
 				C34B3A3021021C4F0001027A /* DefaultLightLogTheme.swift */,
+				C30D5888214FF78400F36DB8 /* EmojiLogTheme.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -184,6 +252,16 @@
 		C3FF3B1C2126ABDC00DB75D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C30D58992150DBC400F36DB8 /* Alamofire.framework */,
+				C30D589D2150DBC500F36DB8 /* FBLPromises.framework */,
+				C30D589B2150DBC500F36DB8 /* KeychainAccess.framework */,
+				C30D589E2150DBC500F36DB8 /* Promises.framework */,
+				C30D589C2150DBC500F36DB8 /* RxBlocking.framework */,
+				C30D58982150DBC400F36DB8 /* RxCocoa.framework */,
+				C30D589A2150DBC400F36DB8 /* RxSwift.framework */,
+				C30D58952150DBAE00F36DB8 /* SwiftyJSON.framework */,
+				C30D58922150DB9E00F36DB8 /* SwiftHEXColors.framework */,
+				C30D588A2150D95A00F36DB8 /* Cobalt.framework */,
 				C3FF3B232126ACDF00DB75D2 /* Erbium.framework */,
 				C3FF3B1F2126ACD200DB75D2 /* Dysprosium.framework */,
 				C3FF3B1D2126AC2C00DB75D2 /* CocoaAsyncSocket.framework */,
@@ -260,6 +338,7 @@
 				DFA347F41D649A7000C41F8D /* Sources */,
 				DFA347F51D649A7000C41F8D /* Frameworks */,
 				DFA347F61D649A7000C41F8D /* Resources */,
+				C30D588D2150DB6B00F36DB8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -330,7 +409,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34B3A4221021C500001027A /* Logger+Esites.swift in Sources */,
 				C34B3A4C21021C500001027A /* Logger+TableLog.swift in Sources */,
 				C34B3A4B21021C500001027A /* Logger+Line.swift in Sources */,
 				C34B3A4421021C500001027A /* EsitesDarkLogTheme.swift in Sources */,
@@ -347,6 +425,7 @@
 				C34B3A4F21021C500001027A /* PapertrailLogger.swift in Sources */,
 				C34B3A4521021C500001027A /* EsitesLightLogTheme.swift in Sources */,
 				C34B3A4321021C500001027A /* LogFormatter.swift in Sources */,
+				C30D5889214FF78400F36DB8 /* EmojiLogTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +501,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -475,7 +554,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -531,6 +610,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LithiumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.esites.library.lithium.test;
@@ -542,6 +625,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LithiumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.esites.library.lithium.test;

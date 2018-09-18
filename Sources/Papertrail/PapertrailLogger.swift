@@ -132,8 +132,8 @@ public class PapertrailLogger : NSObject {
         
         _connectTCPSocket()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(_appBecomesActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(_appEntersBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(_appBecomesActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(_appEntersBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
     
     @objc private func _appBecomesActive() {

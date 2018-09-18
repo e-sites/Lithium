@@ -47,12 +47,16 @@ public protocol LogTheme {
     var successStyle:LogStyle { get set }
     var verboseStyle:LogStyle { get set }
     var executeStyle:LogStyle { get set }
+    var requestStyle:LogStyle { get set }
+    var responseStyle:LogStyle { get set }
     var tableStyle:TableStyle { get set }
     
     var lineColor:UIColor { get set }
     var contextForegroundColor:UIColor { get set }
     
     var formatter:LogFormatter { get set }
+
+    var hasColors: Bool { get }
 }
 
 
