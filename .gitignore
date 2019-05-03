@@ -70,3 +70,4 @@ fastlane/.tmp_build
 vendor/bundle
 buildkite-script-*
 Carthage/
+.build
