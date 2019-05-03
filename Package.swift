@@ -8,12 +8,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/e-sites/Erbium", .branch("master")),
+        .package(url: "https://github.com/e-sites/SwiftHEXColors", .branch("master")),
     ],
     targets: [
         .target(
             name: "Lithium",
             dependencies: [
-                "Erbium"
+                "Erbium",
+                "SwiftHEXColors"
             ],
             path: "Sources/Core"
         )

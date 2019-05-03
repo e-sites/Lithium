@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Erbium",
+        "repositoryURL": "https://github.com/e-sites/Erbium",
+        "state": {
+          "branch": "master",
+          "revision": "a561037cc4df1037eb5115ce22fb3c99f7b750c6",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftHEXColors",
+        "repositoryURL": "https://github.com/e-sites/SwiftHEXColors",
+        "state": {
+          "branch": "master",
+          "revision": "d5deb81080b8db399e5ae3df23dd4a764ea81d53",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
