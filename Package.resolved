@@ -14,17 +14,8 @@
         "package": "Cobalt",
         "repositoryURL": "https://github.com/e-sites/Cobalt.git",
         "state": {
-          "branch": null,
-          "revision": "5c9693b3a1a453fedfaef984ae6f1e72019dca81",
-          "version": "5.9.7"
-        }
-      },
-      {
-        "package": "CocoaAsyncSocket",
-        "repositoryURL": "https://github.com/basvankuijck/CocoaAsyncSocket.git",
-        "state": {
           "branch": "master",
-          "revision": "00551576ddba826501d1006d5097d961e1f92a66",
+          "revision": "d8f0c491b6a07590dd772735c9648dd95b029647",
           "version": null
         }
       },

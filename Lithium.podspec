@@ -19,11 +19,10 @@ Pod::Spec.new do |s|
   s.subspec 'Dysprosium' do |ss|
     ss.dependency 'Lithium/Core'
     ss.dependency 'Dysprosium'
-    ss.source_files  = "Sources/Dysprosium/**/*.*"
+    ss.source_files  = "Sources/Lithium/Dysprosium/**/*.*"
   end
 
   s.subspec 'Papertrail' do |ss|
-    ss.dependency 'Lithium/Core'
     ss.dependency 'CocoaAsyncSocket', '~> 7.5'
     ss.source_files  = "Sources/Papertrail/**/*.*"
     ss.public_header_files  = "Sources/Papertrail/PapertrailLogger.h"
@@ -32,8 +31,8 @@ Pod::Spec.new do |s|
   s.subspec 'Cobalt' do |ss|
     ss.dependency 'Lithium/Core'
     ss.dependency 'Cobalt'
-    ss.source_files  = "Sources/Cobalt/**/*.*"
-    ss.public_header_files  = "Sources/Cobalt/CobaltLogger.h"
+    ss.source_files  = "Sources/Lithium/Cobalt/**/*.*"
+    ss.public_header_files  = "Sources/Lithium/Cobalt/CobaltLogger.h"
   end
 
   s.default_subspec = 'Core'
