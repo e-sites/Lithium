@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Lithium"
-  s.version      = "8.0.0"
+  s.version      = "8.0.5"
   s.author       = { "Bas van Kuijck" => "bas@e-sites.nl" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.homepage     = "http://www.e-sites.nl"
@@ -19,11 +19,13 @@ Pod::Spec.new do |s|
   s.subspec 'Dysprosium' do |ss|
     ss.dependency 'Lithium/Core'
     ss.dependency 'Dysprosium'
-    ss.source_files  = "Sources/Lithium/Dysprosium/**/*.*"
+    ss.source_files  = "Sources/Dysprosium/**/*.*"
   end
 
   s.subspec 'Papertrail' do |ss|
-    ss.dependency 'CocoaAsyncSocket', '~> 7.5'
+    ss.dependency 'Lithium/Core'
+    ss.dependency 'CocoaAsyncSocket'
+    ss.dependency 'Erbium'
     ss.source_files  = "Sources/Papertrail/**/*.*"
     ss.public_header_files  = "Sources/Papertrail/PapertrailLogger.h"
   end
@@ -31,8 +33,8 @@ Pod::Spec.new do |s|
   s.subspec 'Cobalt' do |ss|
     ss.dependency 'Lithium/Core'
     ss.dependency 'Cobalt'
-    ss.source_files  = "Sources/Lithium/Cobalt/**/*.*"
-    ss.public_header_files  = "Sources/Lithium/Cobalt/CobaltLogger.h"
+    ss.source_files  = "Sources/Cobalt/**/*.*"
+    ss.public_header_files  = "Sources/Cobalt/CobaltLogger.h"
   end
 
   s.default_subspec = 'Core'

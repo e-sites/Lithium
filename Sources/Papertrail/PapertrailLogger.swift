@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Erbium
 import CocoaAsyncSocket
 
 public var logTag: String?

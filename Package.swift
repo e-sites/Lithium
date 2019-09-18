@@ -12,13 +12,14 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/e-sites/Cobalt.git", .upToNextMajor(from: "5.0.0")),
         .package(url: "https://github.com/e-sites/Dysprosium.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/e-sites/Erbium.git", .upToNextMajor(from: "4.0.0")),
         .package(url: "https://github.com/basvankuijck/CocoaAsyncSocket.git", .upToNextMajor(from: "7.0.0"))
         
     ],
     targets: [
         .target(
             name: "Lithium",
-            dependencies: [ "Cobalt", "Dysprosium", "CocoaAsyncSocket" ],
+            dependencies: [ "Cobalt", "Dysprosium", "CocoaAsyncSocket", "Erbium" ],
             path: "Sources"
         )
     ]
