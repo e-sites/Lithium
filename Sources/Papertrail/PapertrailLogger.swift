@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import CocoaAsyncSocket
 
 public var logTag: String?
