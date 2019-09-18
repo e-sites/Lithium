@@ -1,5 +1,11 @@
 # Changelog Lithium
 
+## v8.0.0 (18-09-2019)
+- Complete refactor
+
+## v7.2.0 (11-09-2019)
+- Added ColoredConsole theme
+
 ## v7.1.1 (18-09-2018)
 - Strip non alphabet characters from prefix proxyLog
 

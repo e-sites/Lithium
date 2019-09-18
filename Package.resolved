@@ -2,21 +2,102 @@
   "object": {
     "pins": [
       {
-        "package": "Erbium",
-        "repositoryURL": "https://github.com/e-sites/Erbium",
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "ce5be6fbc6f51414c49f56fc8e2b7c99253d9f8e",
+          "version": "4.9.0"
+        }
+      },
+      {
+        "package": "Cobalt",
+        "repositoryURL": "https://github.com/e-sites/Cobalt.git",
+        "state": {
+          "branch": null,
+          "revision": "5c9693b3a1a453fedfaef984ae6f1e72019dca81",
+          "version": "5.9.7"
+        }
+      },
+      {
+        "package": "CocoaAsyncSocket",
+        "repositoryURL": "https://github.com/basvankuijck/CocoaAsyncSocket.git",
         "state": {
           "branch": "master",
-          "revision": "15bbf1243c69161674988db51eda7d61932d799d",
+          "revision": "00551576ddba826501d1006d5097d961e1f92a66",
           "version": null
         }
       },
       {
-        "package": "SwiftHEXColors",
-        "repositoryURL": "https://github.com/e-sites/SwiftHEXColors",
+        "package": "CwlCatchException",
+        "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
         "state": {
-          "branch": "master",
-          "revision": "d5deb81080b8db399e5ae3df23dd4a764ea81d53",
-          "version": null
+          "branch": null,
+          "revision": "7cd2f8cacc4d22f21bc0b2309c3b18acf7957b66",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "CwlPreconditionTesting",
+        "repositoryURL": "https://github.com/mattgallagher/CwlPreconditionTesting.git",
+        "state": {
+          "branch": null,
+          "revision": "c228db5d2ad1b01ebc84435e823e6cca4e3db98b",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "Dysprosium",
+        "repositoryURL": "https://github.com/e-sites/Dysprosium.git",
+        "state": {
+          "branch": null,
+          "revision": "1a17d293577bbe0969a2d0c99313daba046b2521",
+          "version": "5.2.1"
+        }
+      },
+      {
+        "package": "KeychainAccess",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess",
+        "state": {
+          "branch": null,
+          "revision": "0046db4ab8fd7be31a59e57912dbb96639ad8ce9",
+          "version": "3.2.0"
+        }
+      },
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble.git",
+        "state": {
+          "branch": null,
+          "revision": "6abeb3f5c03beba2b9e4dbe20886e773b5b629b6",
+          "version": "8.0.4"
+        }
+      },
+      {
+        "package": "Promises",
+        "repositoryURL": "https://github.com/google/promises",
+        "state": {
+          "branch": null,
+          "revision": "6b6f4fe3385ed37389fb231bc40be81de2f1230f",
+          "version": "1.2.8"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift",
+        "state": {
+          "branch": null,
+          "revision": "b3e888b4972d9bc76495dd74d30a8c7fad4b9395",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON",
+        "state": {
+          "branch": null,
+          "revision": "2b6054efa051565954e1d2b9da831680026cd768",
+          "version": "5.0.0"
         }
       }
     ]

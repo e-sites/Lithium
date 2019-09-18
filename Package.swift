@@ -3,21 +3,28 @@ import PackageDescription
 
 let package = Package(
     name: "Lithium",
+    platforms: [
+        .iOS(.v10),
+    ],
     products: [
-        .library(name: "Lithium", targets: ["Lithium"])
+        .library(name: "Lithium", targets: ["Lithium", "LithiumTests"])
     ],
     dependencies: [
-        .package(url: "https://github.com/e-sites/Erbium", .branch("master")),
-        .package(url: "https://github.com/e-sites/SwiftHEXColors", .branch("master")),
+        .package(url: "https://github.com/e-sites/Cobalt.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/e-sites/Dysprosium.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/basvankuijck/CocoaAsyncSocket.git", .branch("master"))
+        
     ],
     targets: [
         .target(
             name: "Lithium",
-            dependencies: [
-                "Erbium",
-                "SwiftHEXColors"
-            ],
-            path: "Sources/Core"
+            dependencies: [ "Cobalt", "Dysprosium", "CocoaAsyncSocket" ],
+            path: "Sources"
+        ),
+        .testTarget(
+            name: "LithiumTests",
+            dependencies: [ "Lithium" ],
+            path: "Tests"
         )
     ]
 )

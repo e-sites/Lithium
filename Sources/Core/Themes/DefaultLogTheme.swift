@@ -1,14 +1,13 @@
 //
-//  EmojiLogTheme.swift
+//  DefaultLogTheme.swift
 //  Lithium
 //
-//  Created by Bas van Kuijck on 17/09/2018.
-//  Copyright © 2018 E-sites. All rights reserved.
+//  Created by Bas van Kuijck on 12/09/2019.
 //
 
 import Foundation
 
-public class EmojiLogTheme: LogTheme {
+public class DefaultLogTheme: LogTheme {
     public init() {
 
     }
@@ -23,7 +22,7 @@ public class EmojiLogTheme: LogTheme {
         .date(format: "yyyy-MM-dd HH:mm:ss.SSS"),
         .targetName,
         .threadNumber,
-        .prefix(format: "%@ 𝌀 "),
+        .prefix(format: "%@: "),
         .message
     ])
 
@@ -31,55 +30,55 @@ public class EmojiLogTheme: LogTheme {
 
     public var errorStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "❌ ERR"
+        style.prefixText = "Error"
         return style
     }
 
     public var executeStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "⚙️ EXE"
+        style.prefixText = "Execute"
         return style
     }
 
     public var debugStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "🐝 DEB"
+        style.prefixText = "Debug"
         return style
     }
 
     public var infoStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "🔰 INF"
+        style.prefixText = "Info"
         return style
     }
 
     public var warningStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "⚠️ WAR"
+        style.prefixText = "Warning"
         return style
     }
 
     public var successStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "✅ SUC"
+        style.prefixText = "Sucess"
         return style
     }
 
     public var verboseStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "💬 VER"
+        style.prefixText = "Verbose"
         return style
     }
 
     public var requestStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "➡️ REQ"
+        style.prefixText = "Request"
         return style
     }
 
     public var responseStyle: LogStyle {
         let style = LightLogStyle()
-        style.prefixText = "⬅️ RES"
+        style.prefixText = "Response"
         return style
     }
 }

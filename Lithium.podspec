@@ -1,19 +1,18 @@
 Pod::Spec.new do |s|
 
   s.name         = "Lithium"
-  s.version      = "7.1.1"
+  s.version      = "8.0.0"
   s.author       = { "Bas van Kuijck" => "bas@e-sites.nl" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.homepage     = "http://www.e-sites.nl"
   s.summary      = "_The_ E-sites logging framework"
-  s.source       = { :git => "https://github.com/e-sites/Lithium.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/e-sites/Lithium.git", :tag => "v#{s.version}" }
   s.source_files  = "Sources/Lithium.h"
   s.public_header_files  = "Sources/Lithium.h"
   s.platform     = :ios, '9.0'
   s.requires_arc = true
 
   s.subspec 'Core' do |ss|
-    ss.dependency 'SwiftHEXColors', '~> 1.0'
     ss.source_files  = "Sources/Core/**/*.*"
   end
 
@@ -26,7 +25,6 @@ Pod::Spec.new do |s|
   s.subspec 'Papertrail' do |ss|
     ss.dependency 'Lithium/Core'
     ss.dependency 'CocoaAsyncSocket', '~> 7.5'
-    ss.dependency 'Erbium'
     ss.source_files  = "Sources/Papertrail/**/*.*"
     ss.public_header_files  = "Sources/Papertrail/PapertrailLogger.h"
   end

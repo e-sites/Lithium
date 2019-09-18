@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 extension String {
     func trimWhitespaces() -> String {
@@ -20,16 +19,6 @@ extension String {
             
         }
         return str
-    }
-    
-    func color() -> UIColor? {
-        let s = self.components(separatedBy: ",")
-        
-        let spl = s.map { CGFloat(($0 as NSString).doubleValue / 255.0) }
-        if (spl.count == 3 || spl.count == 4) {
-            return UIColor(red: spl[0], green:spl[1], blue: spl[2], alpha: 1)
-        }
-        return nil
     }
 }
 

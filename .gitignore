@@ -22,6 +22,7 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 vendor/bundle
+.swiftpm
 
 ## Obj-C/Swift specific
 *.hmap
@@ -32,6 +33,7 @@ vendor/bundle
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+Lithium.xcodeproj
 
 # Swift Package Manager
 #

@@ -10,85 +10,78 @@ import Foundation
 import CocoaAsyncSocket
 import Erbium
 
-public var logTag:String?
+public var logTag: String?
 
-public extension Logger {
+extension Logger {
     
     public func setupWithPapertrail(host: String, port: UInt16) {
         PapertrailLogger.default.setup(logger: self, host: host, port: port)
     }
     
-    public func error(tag: String, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func error(tag: String, _ items: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         error(items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
     
-    public func warning(tag: String, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func warning(tag: String, _ items: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         warning(items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
     
-    public func exe(tag: String, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func exe(tag: String, _ items: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         exe(items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
     
-    public func debug(tag: String, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func debug(tag: String, _ items: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         debug(items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
     
-    public func info(tag: String, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func info(tag: String, _ items: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         info(items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
     
-    public func success(tag: String, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func success(tag: String, _ items: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         success(items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
     
-    public func verbose(tag: String, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func verbose(tag: String, _ items: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         verbose(items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
     
-    public func log(tag: String, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func log(tag: String, _ items: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         log(items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
-    
-    public func colorLog(tag: String, _ foregroundColor: String, backgroundColor:String?=nil, _ items:Any..., file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
-        let originalLogTag = logTag
-        logTag = tag
-        colorLog(foregroundColor, backgroundColor: backgroundColor, items.map { "\($0)" }.joined(separator: formatter.separator), file: file, function: function, line: line, column: column)
-        logTag = originalLogTag
-    }
-    
-    public func request(tag: String, _ method: String, _ url:String, _ parameters:String?=nil, file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+
+    public func request(tag: String, _ method: String, _ url: String, _ parameters: String? = nil, file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         request(method, url, parameters, file: file, function: function, line: line, column: column)
         logTag = originalLogTag
     }
     
-    public func response(tag: String, _ method: String, _ url:String, _ parameters:String?=nil, file:String=#file, function:String=#function, line:Int=#line, column:Int=#column) {
+    public func response(tag: String, _ method: String, _ url: String, _ parameters: String? = nil, file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
         let originalLogTag = logTag
         logTag = tag
         response(method, url, parameters, file: file, function: function, line: line, column: column)
@@ -114,11 +107,11 @@ public class PapertrailLogger : NSObject {
         super.init()
     }
     
-    private(set) public var host:String = ""
-    private(set) public var port:UInt16 = 0
+    private(set) public var host: String = ""
+    private(set) public var port: UInt16 = 0
     fileprivate var _connecting = false
     public var logger: Lithium.Logger!
-    public var programName:String?
+    public var programName: String?
     
     public var shouldColorizePrefixTags = true
     
@@ -154,11 +147,11 @@ public class PapertrailLogger : NSObject {
         }
     }
     
-    public func log(_ msg:String, level:LogLevel, style:LogStyle?=nil, theme:LogTheme?=nil) {
-        if (host == "" || port == 0) {
+    public func log(_ msg:String, level: LogLevel, style: LogStyle? = nil, theme: LogTheme? = nil) {
+        if host == "" || port == 0 {
             return
         }
-        if (_firstLaunch) {
+        if _firstLaunch {
             _firstLaunch = false
             logTag = "launch"
             log("[ INF ] ==================================================", level: .info)
@@ -173,7 +166,7 @@ public class PapertrailLogger : NSObject {
         let senderName = Bundle.main.bundleIdentifier ?? "com.esites.unknown"
         let date = _dateFormat.string(from: Date())
         var lTag = logTag ?? "default"
-        if (msg.hasPrefix("[ DEALLOC ]")) {
+        if msg.hasPrefix("[ DEALLOC ]") {
             lTag = "dealloc"
         }
         let o = "\u{00A0}" * max(1, (16 - lTag.count))
@@ -181,8 +174,8 @@ public class PapertrailLogger : NSObject {
         
         let programName = self.programName ?? "anonymous"
         
-        if (!_tcpSocket.isConnected) {
-            if (_connecting) {
+        if !_tcpSocket.isConnected {
+            if _connecting {
                 return
             }
             self._connectTCPSocket()
@@ -191,21 +184,20 @@ public class PapertrailLogger : NSObject {
         let logLines = msg.components(separatedBy: "\n")
         for ll in logLines {
             var msg = ll
-            if (msg.hasPrefix("[ REQ ]") && shouldColorizePrefixTags) {
+            if msg.hasPrefix("[ REQ ]") && shouldColorizePrefixTags {
                 msg = _wrap(text: msg, inColor: "36")
                 
-            } else if (msg.hasPrefix("[ RES ]") && shouldColorizePrefixTags) {
+            } else if msg.hasPrefix("[ RES ]") && shouldColorizePrefixTags {
                 msg = _wrap(text: msg, inColor: "35")
                 
             } else {
-                
                 switch level {
                 case .error:
                     msg = _wrap(text: msg, inColor: "31")
                 case .warning:
                     msg = _wrap(text: msg, inColor: "33")
                 default:
-                    if (theme?.successStyle == style) {
+                    if theme?.successStyle.prefixText == style?.prefixText {
                         msg = _wrap(text: msg, inColor: "32")
                     }
                 }

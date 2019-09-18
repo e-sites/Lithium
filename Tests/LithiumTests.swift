@@ -7,23 +7,13 @@
 //
 
 import XCTest
-import Dysprosium
 @testable import Lithium
 
 class LithiumTests: XCTestCase {
-    var logger: Logger = {
+    var logger: Logger {
         let l = Logger()
         l.theme = EmojiLogTheme()
         return l
-    }()
-
-    override func setUp() {
-        super.setUp()
-		
-    }
-    
-    override func tearDown() {
-		super.tearDown()
     }
 
     func testLogging() {
@@ -37,26 +27,5 @@ class LithiumTests: XCTestCase {
         logger.success("Log line -> success")
         logger.request("GET", "https://e-sites.nl", "test=bla")
         logger.response("GET", "https://e-sites.nl", "{}")
-    }
-
-    fileprivate var object: DeallocObject?
-
-    func testDeallocation() {
-        logger.setupWithDysprosium()
-        let exp = expectation(description: "dealloc")
-        object = DeallocObject()
-        DispatchQueue.main.asyncAfter(wallDeadline: .now() + .seconds(1)) {
-            self.object = nil
-            DispatchQueue.main.asyncAfter(wallDeadline: .now() + .seconds(3)) {
-                exp.fulfill()
-            }
-        }
-        waitForExpectations(timeout: 10, handler: nil)
-    }
-}
-
-private class DeallocObject: DysprosiumCompatible {
-    deinit {
-        deallocated()
     }
 }
