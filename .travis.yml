@@ -1,13 +1,17 @@
 language: objective-c
 osx_image: xcode10
 
+addons:
+  homebrew:
+    update: true
+    brewfile: true
+
 cache: 
   directories:
   - Carthage
   - vendor/bundle
 
 before_install:
-  - brew update && brew bundle
   - carthage bootstrap --cache-builds --platform iOS
 
 script:
