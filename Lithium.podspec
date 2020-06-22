@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Lithium"
-  s.version      = "8.0.6"
+  s.version      = "8.0.7"
   s.author       = { "Bas van Kuijck" => "bas@e-sites.nl" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.homepage     = "http://www.e-sites.nl"

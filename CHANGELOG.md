@@ -1,5 +1,8 @@
 # Changelog Lithium
 
+# v8.0.7 (22-06-2020)
+- Bumped Cobalt version
+
 ## v8.0.0 (18-09-2019)
 - Complete refactor
 
