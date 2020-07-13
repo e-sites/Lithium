@@ -37,7 +37,7 @@ public class EmojiLogTheme: LogTheme {
 
     public var traceStyle: LogStyle {
         let style = LogStyle()
-        style.prefixText = "ℹ️ TRA"
+        style.prefixText = "🔰 TRA"
         return style
     }
 
@@ -49,7 +49,7 @@ public class EmojiLogTheme: LogTheme {
 
     public var infoStyle: LogStyle {
         let style = LogStyle()
-        style.prefixText = "🔰 INF"
+        style.prefixText = "ℹ️ INF"
         return style
     }
 
