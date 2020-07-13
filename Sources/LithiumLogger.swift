@@ -56,6 +56,14 @@ public struct LithiumLogger: LogHandler {
                     style = theme.responseStyle
                     logMessage = logMessage.replacingOccurrences(of: "[RES] ", with: "")
                 }
+            } else if metadata?["tag"] == "dealloc" {
+                if let metadataValue = metadata?["_prefixText"],
+                    case let Logger.MetadataValue.string(prefixText) = metadataValue {
+                    style = LogStyle()
+                    style.prefixText = prefixText
+                }
+                metadata?.removeValue(forKey: "_prefixText")
+                metadata?.removeValue(forKey: "tag")
             }
         }
 
