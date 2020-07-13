@@ -18,7 +18,7 @@ _The_ E-sites logging framework.
 **package.swift** dependency:
 
 ```swift
-.package(url: "https://github.com/e-sites/litihium.git", from: "9.0.0"),
+.package(url: "https://github.com/e-sites/lithium.git", from: "9.0.0"),
 ```
 
 and to your application/library target, add `"Lithium"` to your `dependencies`, e.g. like this:

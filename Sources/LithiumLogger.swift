@@ -17,11 +17,9 @@ public struct LithiumLogger: LogHandler {
     public var logLevel: Logger.Level = .trace
     public var theme: LogTheme = DefaultLogTheme()
     public let label: String
-    private let dateFormatter = DateFormatter()
 
     public init(label: String) {
         self.label = label
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     }
 
     public func log(level: Logger.Level, message: Logger.Message, metadata: Logger.Metadata?, file: String, function: String, line: UInt) {

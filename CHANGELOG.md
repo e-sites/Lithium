@@ -1,5 +1,8 @@
 # Changelog Lithium
 
+# v9.0.2 (13-07-2020)
+- Public accessible initializers
+
 # v9.0.1 (13-07-2020)
 - Public accessible initializers
 

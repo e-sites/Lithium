@@ -9,6 +9,10 @@ import Foundation
 
 open class LogStyle {
     public var prefixText: String?
+    
+    public init() {
+
+    }
 
     func render(text: String) -> String {
         return text
