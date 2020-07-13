@@ -8,39 +8,23 @@ _The_ E-sites logging framework.
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-swift.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/built-with-swag.svg)](http://forthebadge.com)
 
-[![Platform](https://img.shields.io/cocoapods/p/Lithium.svg?style=flat)](http://cocoadocs.org/docsets/Lithium)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Lithium.svg)](http://cocoadocs.org/docsets/Lithium)
 [![Travis-ci](https://travis-ci.org/e-sites/Lithium.svg?branch=master&001)](https://travis-ci.org/e-sites/Lithium)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
 # Installation
 
-## CocoaPods
-Podfile:
+## SwiftPM
 
-```ruby
-pod 'Lithium'
+**package.swift** dependency:
+
+```swift
+.package(url: "https://github.com/e-sites/litihium.git", from: "9.0.0"),
 ```
 
-And then
+and to your application/library target, add `"Lithium"` to your `dependencies`, e.g. like this:
 
-```
-pod install
-```
-
-## Carthage
-
-Cartfile:
-
-```ruby
-github "e-sites/Lithium"
-```
-
-And then
-
-```
-carthage update
+```swift
+.target(name: "BestExampleApp", dependencies: ["Lithium"]),
 ```
 
 # Implementation
@@ -49,7 +33,12 @@ carthage update
 
 ```swift
 import Lithium
-let logger = Lithium.Logger()
+
+let logger: Logger = {
+    var ll = Logger(label: "com.swift-log.awesome-app")
+    ll.logLevel = .trace
+    return ll
+}()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -58,47 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    logger.theme = EmojiLogTheme()
-    // logger.theme = NoColorsLogTheme() // If you don't have the XcodeColors plugin installed
-    #if !DEBUG
-    logger.enabled = false
-    #endif
     
-    // ... The rest of the launch stuff
-    
-    return true
-}
-```
-
-## Logging
-
-```swift
-public func error(_ items:Any...)
-public func warning(_ items:Any...,)    
-public func exe(_ items:Any...)    
-public func debug(_ items:Any...)    
-public func info(_ items:Any...)    
-public func success(_ items:Any...)    
-public func verbose(_ items:Any...)
-public func log(_ items:Any...)    
-public func colorLog(_ foregroundColor: String, backgroundColor:String?=nil, _ items:Any...)
-public func request(_ method: String, _ url:String, _ parameters:String?=nil)
-public func response(_ method: String, _ url:String, _ parameters:String?=nil)
-
-public func table<O>(object:O, shouldPrint:Bool=true)
-public func table<O>(object: O, shouldPrint:Bool=true)
-public func table<V>(array: [V], shouldPrint:Bool=true)
-public func table<V>(dictionary: [String: V], title: String, shouldPrint: Bool)
-```
-
-## Crashlytics
-
-You can also automatically log to crashlytics:
-
-```swift
-Fabric.with([Crashlytics.self])
-
-logger.logProxy = { _, _, message, _ in
-    CLSLogv("%@", getVaList([ message ]))
+		LoggingSystem.bootstrap { label -> LogHandler in
+			var lithiumLogger = LithiumLogger(label: label)
+			lithiumLogger.theme = EmojiLogTheme()
+			return lithiumLogger
+		}
+	    
+		return true
+	}
 }
 ```

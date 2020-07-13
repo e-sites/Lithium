@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.1
 import PackageDescription
 
 let package = Package(
@@ -10,16 +10,13 @@ let package = Package(
         .library(name: "Lithium", targets: ["Lithium"])
     ],
     dependencies: [
-        .package(url: "https://github.com/e-sites/Cobalt.git", .upToNextMajor(from: "6.0.0")),
-        .package(url: "https://github.com/e-sites/Dysprosium.git", .upToNextMajor(from: "5.2.1")),
-        .package(url: "https://github.com/e-sites/Erbium.git", .upToNextMajor(from: "4.4.1")),
-        .package(url: "https://github.com/basvankuijck/CocoaAsyncSocket.git", .upToNextMajor(from: "7.6.4"))
+        .package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.3.0"))
         
     ],
     targets: [
         .target(
             name: "Lithium",
-            dependencies: [ "Cobalt", "Dysprosium", "CocoaAsyncSocket", "Erbium" ],
+            dependencies: [ "Logging" ],
             path: "Sources"
         )
     ]

@@ -13,8 +13,4 @@ open class LogStyle {
     func render(text: String) -> String {
         return text
     }
-
-    public init() {
-
-    }
 }

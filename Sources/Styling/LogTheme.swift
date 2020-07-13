@@ -9,14 +9,13 @@
 import Foundation
 
 public protocol LogTheme {
-    var defaultStyle: LogStyle { get }
     var errorStyle: LogStyle { get }
     var debugStyle: LogStyle { get }
     var infoStyle: LogStyle { get }
     var warningStyle: LogStyle { get }
-    var successStyle: LogStyle { get }
-    var verboseStyle: LogStyle { get }
-    var executeStyle: LogStyle { get }
+    var criticalStyle: LogStyle { get }
+    var noticeStyle: LogStyle { get }
+    var traceStyle: LogStyle { get }
     var requestStyle: LogStyle { get }
     var responseStyle: LogStyle { get }
     var formatter: LogFormatter { get }

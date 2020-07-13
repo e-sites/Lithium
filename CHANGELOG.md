@@ -1,5 +1,9 @@
 # Changelog Lithium
 
+# v9.0.0 (13-07-2020)
+- Compatible with swift-log
+- Removed cocoapods and carthage dependencies
+
 # v8.0.7 (22-06-2020)
 - Bumped Cobalt version
 

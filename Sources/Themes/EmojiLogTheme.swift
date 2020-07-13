@@ -9,76 +9,66 @@
 import Foundation
 
 public class EmojiLogTheme: LogTheme {
-    public init() {
 
-    }
-
-    private class LightLogStyle: LogStyle {
-        override init() {
-            super.init()
-        }
-    }
-
-    public var formatter = LogFormatter(format: "%@ %@ [t:%@] %@%@", components: [
+    public var formatter = LogFormatter(format: "%@ %@ [t:%@] %@ 𝌀 %@%@", components: [
         .date(format: "yyyy-MM-dd HH:mm:ss.SSS"),
         .targetName,
         .threadNumber,
-        .prefix(format: "%@ 𝌀 "),
-        .message
+        .prefix,
+        .message,
+        .metadata(format: " 𝌀 %@")
     ])
-
-    public var defaultStyle: LogStyle = LightLogStyle()
-
+    
     public var errorStyle: LogStyle {
-        let style = LightLogStyle()
+        let style = LogStyle()
+        style.prefixText = "⛔️ CRI"
+        return style
+    }
+
+    public var criticalStyle: LogStyle {
+        let style = LogStyle()
         style.prefixText = "❌ ERR"
         return style
     }
 
-    public var executeStyle: LogStyle {
-        let style = LightLogStyle()
-        style.prefixText = "⚙️ EXE"
+    public var traceStyle: LogStyle {
+        let style = LogStyle()
+        style.prefixText = "ℹ️ TRA"
         return style
     }
 
     public var debugStyle: LogStyle {
-        let style = LightLogStyle()
+        let style = LogStyle()
         style.prefixText = "🐝 DEB"
         return style
     }
 
     public var infoStyle: LogStyle {
-        let style = LightLogStyle()
+        let style = LogStyle()
         style.prefixText = "🔰 INF"
         return style
     }
 
     public var warningStyle: LogStyle {
-        let style = LightLogStyle()
+        let style = LogStyle()
         style.prefixText = "⚠️ WAR"
         return style
     }
 
-    public var successStyle: LogStyle {
-        let style = LightLogStyle()
-        style.prefixText = "✅ SUC"
-        return style
-    }
-
-    public var verboseStyle: LogStyle {
-        let style = LightLogStyle()
-        style.prefixText = "💬 VER"
+    public var noticeStyle: LogStyle {
+        let style = LogStyle()
+        style.prefixText = "💬 NOT"
         return style
     }
 
     public var requestStyle: LogStyle {
-        let style = LightLogStyle()
+        let style = LogStyle()
         style.prefixText = "➡️ REQ"
         return style
     }
 
     public var responseStyle: LogStyle {
-        let style = LightLogStyle()
+        let style = LogStyle()
         style.prefixText = "⬅️ RES"
         return style
     }

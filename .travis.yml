@@ -1,14 +1,5 @@
 language: objective-c
-osx_image: xcode10
-
-cache: 
-  directories:
-  - Carthage
-  - vendor/bundle
-
-before_install:
-  - brew update && brew bundle
-  - carthage bootstrap --cache-builds --platform iOS
+osx_image: xcode11.5
 
 script:
-  - xcodebuild -project Lithium.xcodeproj -scheme Lithium -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' clean build
+  - swift build

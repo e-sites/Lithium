@@ -7,20 +7,28 @@
 //
 
 import Foundation
+import Logging
+
+struct LogContext {
+    let thread: Thread
+    let file: String
+    let function: String
+    let line: UInt
+}
 
 public class LogFormatter {
-    
     public enum Component {
         case date(format: String)
-        case prefix(format: String)
+        case prefix
         case message
         case targetName
-        case file(fullPath: Bool, showExtension: Bool)
         case lineNumber
+        case file(fullPath: Bool, showExtension: Bool)
         case threadNumber
+        case metadata(format: String)
     }
     
-    public var format = "%@ [%@] %@:%@ [t:%@] %@%@"
+    public var format = "%@ [%@] %@:%@ [t:%@] %@: %@"
     fileprivate let dateFormatter = DateFormatter()
     
     
@@ -30,8 +38,9 @@ public class LogFormatter {
         .file(fullPath: false, showExtension: false),
         .lineNumber,
         .threadNumber,
-        .prefix(format: "%@: "),
-        .message
+        .prefix,
+        .message,
+        .metadata(format: " -- %@")
         ] {
         didSet {
             _setDateFormatter()
@@ -53,21 +62,24 @@ public class LogFormatter {
 
 extension LogFormatter {
     
-    func format(component: Component, style:LogStyle, level:LogLevel, items: [Any], context: Logger.LogContext) -> String {
+    private func format(component: Component, style: LogStyle, message: String, context: LogContext, metadata: String?) -> String {
         func _parseDate(format: String) -> String {
             return dateFormatter.string(from: Date())
         }
-        
+
         func _parseMessage() -> String {
-            return style.render(text: items.map{ "\($0)" }.joined(separator: separator))
+            return style.render(text: message)
         }
-        
-        func _parsePrefix(prefixFormat: String) -> String {
-            guard let prefixText = style.prefixText else {
+
+        func _parseMetadata(format: String) -> String {
+            guard let metadataString = metadata else {
                 return ""
             }
-            
-            return String(format: prefixFormat, prefixText)
+            return String(format: format, metadataString)
+        }
+        
+        func _parsePrefix() -> String {
+            return style.prefixText ?? ""
         }
         
         func _parseThread() -> String {
@@ -105,8 +117,8 @@ extension LogFormatter {
         case .message:
             return _parseMessage()
             
-        case .prefix(let prefixFormat):
-            return _parsePrefix(prefixFormat: prefixFormat)
+        case .prefix:
+            return _parsePrefix()
             
         case .threadNumber:
             return _parseThread()
@@ -119,18 +131,21 @@ extension LogFormatter {
             
         case .targetName:
             return _parseTargetName()
+
+        case .metadata(let format):
+            return _parseMetadata(format: format)
         }
         
     }
 
-    func parse(level: LogLevel, style: LogStyle, items: [Any], context: Logger.LogContext) -> String {
-        return _parse(level: level, style: style, items: items, context: context)
+    func parse(style: LogStyle, message: String, context: LogContext, metadata: String?) -> String {
+        return _parse(style: style, message: message, context: context, metadata: metadata)
     }
     
     
-    private func _parse(level: LogLevel, style: LogStyle, items: [Any], context: Logger.LogContext) -> String {
+    private func _parse(style: LogStyle, message: String, context: LogContext, metadata: String?) -> String {
         let arguments = components.map { component -> CVarArg in
-            return self.format(component: component, style: style, level: level, items: items, context: context)
+            return self.format(component: component, style: style, message: message, context: context, metadata: metadata)
         }
         
         return String(format: format, arguments: arguments)
