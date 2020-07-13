@@ -18,6 +18,10 @@ public class EmojiLogTheme: LogTheme {
         .message,
         .metadata(format: " 𝌀 %@")
     ])
+
+    public init() {
+
+    }
     
     public var errorStyle: LogStyle {
         let style = LogStyle()

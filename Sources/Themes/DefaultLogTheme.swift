@@ -17,6 +17,10 @@ public class DefaultLogTheme: LogTheme {
         .metadata(format: " -- %@")
     ])
 
+    public init() {
+
+    }
+    
     public var errorStyle: LogStyle {
         let style = LogStyle()
         style.prefixText = "ERR"
