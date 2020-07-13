@@ -25,13 +25,13 @@ public class EmojiLogTheme: LogTheme {
     
     public var errorStyle: LogStyle {
         let style = LogStyle()
-        style.prefixText = "⛔️ CRI"
+        style.prefixText = "❌ ERR"
         return style
     }
 
     public var criticalStyle: LogStyle {
         let style = LogStyle()
-        style.prefixText = "❌ ERR"
+        style.prefixText = "⛔️ CRI"
         return style
     }
 

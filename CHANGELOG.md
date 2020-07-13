@@ -1,5 +1,8 @@
 # Changelog Lithium
 
+# v9.0.4 (13-07-2020)
+- Wrong emoji's
+
 # v9.0.2 (13-07-2020)
 - Public accessible initializers
 
