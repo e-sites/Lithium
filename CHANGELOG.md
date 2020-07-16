@@ -1,5 +1,8 @@
 # Changelog Lithium
 
+# v9.0.5 (16-07-2020)
+- CocoaPods
+
 # v9.0.4 (13-07-2020)
 - Wrong emoji's
 
