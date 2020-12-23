@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Lithium"
-  s.version      = "7.1.1"
+  s.version      = "7.1.2"
   s.author       = { "Bas van Kuijck" => "bas@e-sites.nl" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.homepage     = "http://www.e-sites.nl"
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/e-sites/Lithium.git", :tag => "#{s.version}" }
   s.source_files  = "Sources/Lithium.h"
   s.public_header_files  = "Sources/Lithium.h"
-  s.platform     = :ios, '9.0'
+  s.platform     = :ios, '10.0'
   s.requires_arc = true
 
   s.subspec 'Core' do |ss|
